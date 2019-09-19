@@ -1,0 +1,27 @@
+{
+  "name": "vardict",
+  "version": "1.0.0",
+  "description": "Get a dictionary consisting of CLI arguments",
+  "main": "vardict.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maacpiash/vardict.git"
+  },
+  "keywords": ["argv", "CLI", "Command Line Arguments", "Dictionary"],
+  "author": "Mohammad Abdul Ahad Chowdhury",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"./*.ts\" \"out/*.js\"",
+    "lint": "tslint -p tsconfig.json"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^12.7.5"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2",
+    "tslint": "^5.20.0",
+    "tslint-config-prettier": "^1.18.0"
+  },
+  "files": ["out/*"]
+}
