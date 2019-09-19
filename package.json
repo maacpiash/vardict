@@ -1,6 +1,6 @@
 {
   "name": "vardict",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Get a dictionary consisting of CLI arguments",
   "main": "out/vardict.js",
   "types": "out/vardict.d.ts",

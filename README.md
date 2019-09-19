@@ -4,18 +4,28 @@
 
 ## Example
 
-### `script.js`
+### JavaScript
 
-```JavaScript
+```TypeScript
+const vardict = require('vardict').default;
+
+console.log(vardict);
+```
+
+```Shell
+node script.js --name Anirudha --age 25 --single -c 'Samsung R&D' --home Mymensingh --coolWithLadies false
+```
+
+### TypeScript
+
+```TypeScript
 import vardict from 'vardict';
 
 console.log(vardict);
 ```
 
-### Run the script
-
 ```Shell
-node script.js --name Anirudha --age 25 --single -c 'Samsung R&D' --home Mymensingh --coolWithLadies false
+ts-node script.ts --name Anirudha --age 25 --single -c 'Samsung R&D' --home Mymensingh --coolWithLadies false
 ```
 
 ### Output
