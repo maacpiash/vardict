@@ -18,7 +18,8 @@
   "scripts": {
     "build": "tsc",
     "format": "prettier --write \"./*.ts\" \"out/*.js\"",
-    "lint": "tslint -p tsconfig.json"
+    "lint": "tslint -p tsconfig.json",
+    "test": "tsc && node out/vardict.test.js --name Anirudha --age 25 --single -c 'Samsung R&D' --home Mymensingh --coolWithLadies false"
   },
   "license": "MIT",
   "devDependencies": {

@@ -1,1 +1,4 @@
 vardict.ts
+vardict.test.ts
+out/vardict.test.js
+out/vardict.test.d.ts
