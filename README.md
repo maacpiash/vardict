@@ -2,6 +2,7 @@
 
 > Get a dictionary consisting of CLI arguments
 
+[![Travis (.org)](https://img.shields.io/travis/maacpiash/vardict?logo=travis&style=flat-square)](https://travis-ci.org/maacpiash/vardict)
 [![npm version](https://img.shields.io/npm/v/vardict.svg?logo=npm&style=flat-square)](https://www.npmjs.com/package/vardict)
 [![npm Downloads](https://img.shields.io/npm/dt/vardict.svg?logo=node.js&style=flat-square)](https://www.npmjs.com/package/vardict)
 ![GitHub top language](https://img.shields.io/github/languages/top/maacpiash/vardict.svg?logo=typescript&style=flat-square)
