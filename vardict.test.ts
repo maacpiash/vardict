@@ -1,5 +1,16 @@
 import vardict from './vardict';
 
-const { name, age, single, c, home, coolWithLadies } = vardict;
+const AnirudhaPaul: { [key: string]: any } = {
+  name: 'Anirudha',
+  age: 25,
+  single: true,
+  c: 'Samsung R&D',
+  home: 'Mymensingh',
+  coolWithLadies: false
+};
 
-((name === 'Anirudha') && (age === 25) && (single) && (c === 'Samsung R&D') && (home === 'Mymensingh') && (!coolWithLadies) && process.exit(0)) || process.exit(1);
+for (let prop in AnirudhaPaul) {
+  if (AnirudhaPaul && AnirudhaPaul[prop] !== vardict[prop]) {
+    process.exit(1);
+  }
+}
