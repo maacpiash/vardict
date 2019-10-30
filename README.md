@@ -8,6 +8,7 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/maacpiash/vardict.svg?logo=typescript&style=flat-square)
 [![License](https://img.shields.io/github/license/maacpiash/vardict.svg?logo=open-source-initiative&style=flat-square)](https://github.com/maacpiash/vardict/blob/master/LICENSE)
 [![PR welcome](https://img.shields.io/badge/PR-welcome-brightgreen.svg?logo=github&style=flat-square)](https://github.com/maacpiash/vardict/compare)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fmaacpiash%2Fvardict.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fmaacpiash%2Fvardict?ref=badge_shield)
 
 ## Example
 
@@ -54,3 +55,7 @@ Add the package via command line.
 | NPM | Yarn |
 | --- | --- |
 | `npm i vardict` | `yarn add vardict` |
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fmaacpiash%2Fvardict.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fmaacpiash%2Fvardict?ref=badge_large)
