@@ -46,8 +46,13 @@ for (let i = 2; i < max; i++) {
     if (key.startsWith('-')) { // some key values might start with two dashes
       key = key.slice(1, keyLen - 1);
     }
-    if (args[i + 1].startsWith('-')) { // key without value is set true by default
-      vardict[key] = true;
+    if (key.includes('=')) { // e.g. --country=BD means vardict[country] = 'BD'
+      const [a, b] = key.split('=');
+      vardict[a] = properValue(b);
+      continue;
+    }
+    if (args[i + 1] && args[i + 1].startsWith('-')) { // key without value is set true by default
+        vardict[key] = true;      
     } else {
       i++;
       value = properValue(args[i]);

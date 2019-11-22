@@ -1,16 +1,17 @@
 import vardict from './vardict';
 
 const AnirudhaPaul: { [key: string]: any } = {
-  name: 'Anirudha',
+  'full name': 'Anirudha Paul',
   age: 25,
   single: true,
   c: 'Samsung R&D',
   home: 'Mymensingh',
-  coolWithLadies: false
+  coolWithLadies: false,
+  wantsToGoTo: 'USA',
+  IELTS: 7.5,
+  favoriteFood: 'kachchi',
+  'nick-name': 'Prasun'
 };
 
-for (let prop in AnirudhaPaul) {
-  if (AnirudhaPaul && AnirudhaPaul[prop] !== vardict[prop]) {
-    process.exit(1);
-  }
-}
+const keys = Object.keys(AnirudhaPaul);
+keys.forEach(k => AnirudhaPaul[k] !== vardict[k] && process.exit(1));
