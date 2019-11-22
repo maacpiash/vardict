@@ -14,12 +14,16 @@
     "Command Line Arguments",
     "Dictionary"
   ],
-  "author":  "Mohammad Abdul Ahad Chowdhury",
+  "author": {
+    "name": "Mohammad Abdul Ahad Chowdhury",
+    "email": "maac@pia.sh",
+    "url": "https://pia.sh"
+  },
   "scripts": {
     "build": "tsc",
     "format": "prettier --write \"./*.ts\" \"out/*.js\"",
     "lint": "tslint -p tsconfig.json",
-    "test": "tsc && node out/vardict.test.js --name 'Anirudha Paul' --age 25 --single -c 'Samsung R&D' --home Mymensingh --coolWithLadies false -wantsToGoTo=USA --IELTS=7.5 --favoriteFood kachchi -nick-name Prasun"
+    "test": "tsc && node out/vardict.test.js --'full name' 'Anirudha Paul' --age 25 --single -c 'Samsung R&D' --home Mymensingh --coolWithLadies false -wantsToGoTo=USA --IELTS=7.5 --favoriteFood kachchi -nick-name Prasun"
   },
   "license": "MIT",
   "devDependencies": {
