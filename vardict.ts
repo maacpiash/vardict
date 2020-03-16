@@ -21,44 +21,47 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-type valueType = string | number | boolean;
+type valueType = string | number | boolean
 
 const properValue = (val: string): valueType => {
-  if (val === 'false') return false;
-  if (val === 'true') return true;
-  const num = Number(val);
-  if (!isNaN(num)) return num;
-  return val;
-};
+  if (val === 'false') return false
+  if (val === 'true') return true
+  const num = Number(val)
+  if (!isNaN(num)) return num
+  return val
+}
 
-const args = process.argv;
-const max = args.length;
+const args = process.argv
+const max = args.length
 
-const vardict: { [key: string]: valueType } = {};
-let key: string;
-let keyLen: number;
-let value: valueType;
+const vardict: { [key: string]: valueType } = {}
+let key: string
+let keyLen: number
+let value: valueType
 
 for (let i = 2; i < max; i++) {
   if (args[i].startsWith('-')) {
-    keyLen = args[i].length;
-    key = args[i].slice(1, keyLen);
-    if (key.startsWith('-')) { // some key values might start with two dashes
-      key = key.slice(1, keyLen - 1);
+    keyLen = args[i].length
+    key = args[i].slice(1, keyLen)
+    if (key.startsWith('-')) {
+      // some key values might start with two dashes
+      key = key.slice(1, keyLen - 1)
     }
-    if (key.includes('=')) { // e.g. --country=BD means vardict[country] = 'BD'
-      const [a, b] = key.split('=');
-      vardict[a] = properValue(b);
-      continue;
+    if (key.includes('=')) {
+      // e.g. --country=BD means vardict[country] = 'BD'
+      const [a, b] = key.split('=')
+      vardict[a] = properValue(b)
+      continue
     }
-    if (args[i + 1] && args[i + 1].startsWith('-')) { // key without value is set true by default
-        vardict[key] = true;      
+    if (args[i + 1] && args[i + 1].startsWith('-')) {
+      // key without value is set true by default
+      vardict[key] = true
     } else {
-      i++;
-      value = properValue(args[i]);
-      vardict[key] = value === undefined ? true : value;
+      i++
+      value = properValue(args[i])
+      vardict[key] = value === undefined ? true : value
     }
   }
 }
 
-export default vardict;
+export default vardict

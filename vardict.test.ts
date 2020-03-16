@@ -1,4 +1,4 @@
-import vardict from './vardict';
+import vardict from './vardict'
 
 const AnirudhaPaul: { [key: string]: any } = {
   'full name': 'Anirudha Paul',
@@ -11,7 +11,7 @@ const AnirudhaPaul: { [key: string]: any } = {
   IELTS: 7.5,
   favoriteFood: 'kachchi',
   'nick-name': 'Prasun'
-};
+}
 
-const keys = Object.keys(AnirudhaPaul);
-keys.forEach(k => AnirudhaPaul[k] !== vardict[k] && process.exit(1));
+const keys = Object.keys(AnirudhaPaul)
+keys.forEach(k => AnirudhaPaul[k] !== vardict[k] && process.exit(1))
