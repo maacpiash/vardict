@@ -21,10 +21,26 @@ This package parses the arguments passed on to CLI and makes a dictionary/map ob
 ```JavaScript
 { country: 'usa', food: 'hamburger', library: 'react' }
 ```
+## Rules of parsing
 
-As mentioniod above, the rule of parsing is "getopt-ish", meaning not exactly the same: annotations with double hyphens or quotation marks are treated as single entities. Equal signs ('`=`'), besides whitespaces, are treated as a separator between the annotation and the value.
+As mentioniod above, the rule of parsing is "getopt-ish", meaning that this package does not work in the exact same way as getopt does.
 
-The package also tries to enforce static typing on to the values, based on the literal inputs. For example, 'true'/'false' is `boolean`, and numeric values are `number`.
+- Annotations with double hyphens or quotation marks are treated as single entities.
+  - `node index.js -name Noyan --home Narayanganj` will produce `{ name: 'Noyan', home: 'Narayanganj' }`
+- Whitespaces and equal signs ('`=`') are treated as a separator between the annotation and the value.
+  - `node index.js --state NSW --capital=Sydney` will generate `{ state: 'NSW', capital: 'Sydney' }`
+- Static typing is enforced on the values, based on the literal inputs. For example, `true`/`false` is `boolean`, and numeric values are `number`.
+  - `node index.js -country BD -popDensPerSqKM 1116 -overPop true` will yield `{ country: 'BD', popDensPerSqKM: 1116, overPop: true }`
+- If there is no value provided after an annotation, it is considered a `boolean` value and set to `true`.
+  - `node index.js -country NZ -covidFree -pop 4886000 -neighbour` will output `{ country: 'NZ', covidFree: true, pop: 4886000, neighbour: true }`.
+
+## Installation
+
+Add the package via command line.
+
+| NPM | Yarn |
+| --- | --- |
+| `npm i vardict` | `yarn add vardict` |
 
 ## How to use
 
@@ -41,7 +57,17 @@ console.log(vardict)
 Here are the input and the output of the code.
 
 ```Shell
-node script.js --'full name' 'Anirudha Paul' --age 25 --single -c 'Samsung R&D' --home Mymensingh --coolWithLadies false -wantsToGoTo=USA --IELTS=7.5 --favoriteFood kachchi -nick-name Prasun
+node script.js                    \
+  --'full name' 'Anirudha Paul'   \
+  --age 25                        \
+  --single                        \
+  -c 'Samsung R&D'                \
+  --home Mymensingh               \
+  --coolWithLadies false          \
+  -wantsToGoTo=USA                \
+  --IELTS=7.5                     \
+  --favoriteFood kachchi          \
+  -nick-name Prasun
 ```
 
 ```JavaScript
@@ -58,13 +84,5 @@ node script.js --'full name' 'Anirudha Paul' --age 25 --single -c 'Samsung R&D' 
   'nick-name': 'Prasun'
 }
 ```
-
-## Installation
-
-Add the package via command line.
-
-| NPM | Yarn |
-| --- | --- |
-| `npm i vardict` | `yarn add vardict` |
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/maacpiash?style=social)](https://twitter.com/maacpiash)
