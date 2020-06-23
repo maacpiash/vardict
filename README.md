@@ -1,4 +1,4 @@
-# vardict • [![Travis (.org)](https://img.shields.io/travis/maacpiash/vardict?logo=travis&style=flat-square)](https://travis-ci.org/maacpiash/vardict) [![npm version](https://img.shields.io/npm/v/vardict.svg?logo=npm&style=flat-square)](https://npm.im/vardict) [![npm Downloads](https://img.shields.io/npm/dt/vardict.svg?logo=node.js&style=flat-square)](https://www.npmjs.com/package/vardict) [![David](https://img.shields.io/david/dev/maacpiash/vardict?logo=node.js&style=flat-square)](https://david-dm.org/maacpiash/vardict) [![License](https://img.shields.io/github/license/maacpiash/vardict.svg?logo=open-source-initiative&style=flat-square)](https://github.com/maacpiash/vardict/blob/master/LICENSE) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?logo=github&style=flat-square)](https://github.com/maacpiash/vardict/compare)
+# vardict • [![Travis (.org)](https://img.shields.io/travis/maacpiash/vardict?logo=travis&style=flat-square)](https://travis-ci.org/maacpiash/vardict) [![npm version](https://img.shields.io/npm/v/vardict.svg?logo=npm&style=flat-square)](https://npm.im/vardict) [![npm Downloads](https://img.shields.io/npm/dt/vardict.svg?logo=npm&style=flat-square)](https://www.npmjs.com/package/vardict) [![David](https://img.shields.io/david/dev/maacpiash/vardict?label=devDeps&logo=npm&style=flat-square)](https://david-dm.org/maacpiash/vardict) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?logo=github&style=flat-square)](https://github.com/maacpiash/vardict/compare)
 
 > Get a dictionary consisting of CLI arguments, parsed and statically typed.
 
@@ -85,4 +85,5 @@ node script.js                    \
 }
 ```
 
+[![GitHub follow](https://img.shields.io/github/followers/maacpiash?label=Follow%20maacpiash&style=social)](https://github.com/maacpiash)
 [![Twitter Follow](https://img.shields.io/twitter/follow/maacpiash?style=social)](https://twitter.com/maacpiash)
