@@ -18,9 +18,8 @@ rules:
     - off
     - never
   '@typescript-eslint/interface-name-prefix':
-    - warn
-    - always
+    - off
+    - never
   '@typescript-eslint/no-use-before-define':
     - off
     - never
-

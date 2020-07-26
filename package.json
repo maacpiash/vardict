@@ -21,8 +21,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "format": "prettier --write \"./*.ts\" \"out/*.js\"",
-    "lint": "tslint -p tsconfig.json",
+    "cleanup": "rimraf out && prettier --write \"./*.ts\" && eslint **/*.ts --fix",
     "test": "tsc && node out/vardict.test.js --'full name' 'Anirudha Paul' --age 25 --single -c 'Samsung R&D' --home Mymensingh --coolWithLadies false -wantsToGoTo=USA --IELTS=7.5 --favoriteFood kachchi -nick-name Prasun"
   },
   "license": "MIT",
@@ -34,6 +33,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.3",
     "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
     "typescript": "^3.9.5"
   },
   "files": [

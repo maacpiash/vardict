@@ -10,7 +10,7 @@ const AnirudhaPaul: { [key: string]: any } = {
   wantsToGoTo: 'USA',
   IELTS: 7.5,
   favoriteFood: 'kachchi',
-  'nick-name': 'Prasun'
+  'nick-name': 'Prasun',
 }
 
 const keys = Object.keys(AnirudhaPaul)
