@@ -1,6 +1,8 @@
-# vardict • [![Travis (.org)](https://img.shields.io/travis/maacpiash/vardict?logo=travis&style=flat-square)](https://travis-ci.org/maacpiash/vardict) [![npm version](https://img.shields.io/npm/v/vardict.svg?logo=npm&style=flat-square)](https://npm.im/vardict) [![npm Downloads](https://img.shields.io/npm/dt/vardict.svg?logo=npm&style=flat-square)](https://www.npmjs.com/package/vardict) [![David](https://img.shields.io/david/dev/maacpiash/vardict?label=devDeps&logo=npm&style=flat-square)](https://david-dm.org/maacpiash/vardict) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?logo=github&style=flat-square)](https://github.com/maacpiash/vardict/compare)
+# vardict
 
 > Get a dictionary consisting of CLI arguments, parsed and statically typed.
+
+[![Travis (.org)](https://img.shields.io/travis/maacpiash/vardict?logo=travis&style=flat-square)](https://travis-ci.org/maacpiash/vardict) [![npm version](https://img.shields.io/npm/v/vardict.svg?logo=npm&style=flat-square)](https://npm.im/vardict) [![npm Downloads](https://img.shields.io/npm/dt/vardict.svg?logo=npm&style=flat-square)](https://www.npmjs.com/package/vardict) [![David](https://img.shields.io/david/dev/maacpiash/vardict?logo=npm&style=flat-square)](https://david-dm.org/maacpiash/vardict) [![npm bundle size](https://img.shields.io/bundlephobia/min/vardict?logo=node.js&style=flat-square)](https://www.npmjs.com/package/vardict) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?logo=github&style=flat-square)](https://github.com/maacpiash/vardict/compare)
 
 ## What does it do?
 
@@ -16,7 +18,7 @@ If there is a large number of arguments, they can be annotated in a [getopt](htt
 node index.js -country usa -food hamburger -library react
 ```
 
-This package parses the arguments passed on to CLI and makes a dictionary/map object that can be used elsewhere in the program. For the previous example, it would work like this:
+`vardict` parses the arguments passed on to CLI and makes a dictionary/map object that can be used elsewhere in the program. For the previous example, it would work like this:
 
 ```JavaScript
 { country: 'usa', food: 'hamburger', library: 'react' }
