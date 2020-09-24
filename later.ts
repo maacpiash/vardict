@@ -33,42 +33,41 @@ const properValue = (val?: string): valueType => {
 }
 
 const args = process.argv
-const max = args.length
 
 const vardict: { [key: string]: trueType } = {}
 let key: string
-let keyLen: number
-let value: valueType
 
-for (let i = 2; i < max; i++) {
+const keys: string[] = []
+const values: valueType[] = []
+
+for (let i = 2; i < args.length; i++) {
   if (args[i].startsWith('-')) {
-    keyLen = args[i].length
-    key = args[i].slice(1, keyLen)
-    if (key.startsWith('-')) {
-      // some key values might start with two dashes
-      key = key.slice(1, keyLen - 1)
-    }
+    key = args[i].replace('-', '')
+    if (key.startsWith('-')) key = key.replace('-', '')
     if (key.includes('=')) {
-      // e.g. --country=BD means vardict[country] = 'BD'
       const [a, b] = key.split('=')
-      vardict[a] = properValue(b)
+      keys.push(a)
+      values.push(properValue(b))
       continue
     }
     if (args[i + 1] && args[i + 1].startsWith('-')) {
-      // key without value is set true by default
-      vardict[key] = true
-    } else {
-      i++
-      value = properValue(args[i])
-      if (vardict[key] === undefined) vardict[key] = value
-      else {
-        // pre-existing value under the same key
-        const existingValue = vardict[key]
-        if (Array.isArray(existingValue))
-          vardict[key] = [...existingValue, value]
-        else vardict[key] = [existingValue, value]
-      }
+      keys.push(key)
+      values.push(true)
+      continue
     }
+    keys.push(key)
+  } else {
+    values.push(properValue(args[i]))
+  }
+}
+
+for (let i = 0; i < keys.length; i++) {
+  if (vardict[keys[i]] === undefined) vardict[keys[i]] = values[i]
+  else {
+    const existingValue = vardict[keys[i]]
+    if (Array.isArray(existingValue))
+      vardict[keys[i]] = [...existingValue, values[i]]
+    else vardict[keys[i]] = [existingValue, values[i]]
   }
 }
 
