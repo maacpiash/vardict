@@ -2,7 +2,7 @@
 
 > Get a dictionary consisting of CLI arguments, parsed and statically typed.
 
-[![Travis (.org)](https://img.shields.io/travis/maacpiash/vardict?logo=travis&style=flat-square)](https://travis-ci.org/maacpiash/vardict) [![npm version](https://img.shields.io/npm/v/vardict.svg?logo=npm&style=flat-square)](https://npm.im/vardict) [![npm Downloads](https://img.shields.io/npm/dt/vardict.svg?logo=npm&style=flat-square)](https://www.npmjs.com/package/vardict) [![David](https://img.shields.io/david/dev/maacpiash/vardict?logo=npm&style=flat-square)](https://david-dm.org/maacpiash/vardict) [![npm bundle size](https://img.shields.io/bundlephobia/min/vardict?logo=node.js&style=flat-square)](https://www.npmjs.com/package/vardict) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?logo=github&style=flat-square)](https://github.com/maacpiash/vardict/compare)
+[![Travis (.org)](https://img.shields.io/travis/maacpiash/vardict?logo=travis&style=flat-square)](https://travis-ci.org/maacpiash/vardict) [![npm version](https://img.shields.io/npm/v/vardict.svg?logo=npm&style=flat-square)](https://www.npmjs.com/package/vardict) [![npm Downloads](https://img.shields.io/npm/dt/vardict.svg?logo=npm&style=flat-square)](https://www.npmjs.com/package/vardict) [![David](https://img.shields.io/david/maacpiash/vardict.svg?logo=yarn&style=flat-square)](https://david-dm.org/maacpiash/vardict) [![npm bundle size](https://img.shields.io/bundlephobia/min/vardict?logo=node.js&style=flat-square)](https://www.npmjs.com/package/vardict) [![Codeclimate maintainability](https://img.shields.io/codeclimate/maintainability/maacpiash/vardict?logo=code-climate&style=flat-square)](https://codeclimate.com/github/maacpiash/vardict)
 
 ## What does it do?
 
@@ -87,5 +87,5 @@ node script.js                    \
 }
 ```
 
-[![GitHub follow](https://img.shields.io/github/followers/maacpiash?label=Follow%20maacpiash&style=social)](https://github.com/maacpiash)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?logo=github&style=flat-square)](https://github.com/maacpiash/vardict/compare) [![GitHub follow](https://img.shields.io/github/followers/maacpiash?label=Follow%20maacpiash&style=social)](https://github.com/maacpiash)
 [![Twitter Follow](https://img.shields.io/twitter/follow/maacpiash?style=social)](https://twitter.com/maacpiash)
