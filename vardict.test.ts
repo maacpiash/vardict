@@ -28,12 +28,12 @@ keys.forEach(k => {
         // since these are arrays and not sets, they may have duplicates
         // hence checking whether their lengths are equal
       ) {
-        console.log(`Error with key ${k}`)
+        console.log(`Error with key ${k} (Array)`)
         console.log(`Expected ${expected}, received ${received}`)
         process.exit(1)
       }
     } else {
-      console.log(`Error with key ${k}`)
+      console.log(`Error with key ${k} (Atomic)`)
       console.log(`Expected ${AnirudhaPaul[k]}, received ${vardict[k]}`)
       process.exit(1)
     }

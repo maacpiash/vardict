@@ -60,14 +60,11 @@ for (let i = 2; i < max; i++) {
     } else {
       i++
       value = properValue(args[i])
-      if (vardict[key] === undefined) vardict[key] = value
-      else {
-        // pre-existing value under the same key
-        const existingValue = vardict[key]
-        if (Array.isArray(existingValue))
-          vardict[key] = [...existingValue, value]
-        else vardict[key] = [existingValue, value]
-      }
+      const preExistingValue = vardict[key]
+      if (preExistingValue === undefined) vardict[key] = value
+      else if (Array.isArray(preExistingValue))
+        vardict[key] = [...(preExistingValue as valueType[]), value]
+      else vardict[key] = [preExistingValue as valueType, value]
     }
   }
 }
