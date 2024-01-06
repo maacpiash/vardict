@@ -21,7 +21,8 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-type valueType = string | number | boolean
+export type valueType = string | number | boolean
+export type dictionary = Record<string, valueType>
 
 const properValue = (val: string): valueType => {
   if (val === 'false') return false
@@ -34,7 +35,7 @@ const properValue = (val: string): valueType => {
 const args = process.argv
 const max = args.length
 
-const vardict: { [key: string]: valueType } = {}
+const vardict: dictionary = {}
 let key: string
 let keyLen: number
 let value: valueType
