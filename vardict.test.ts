@@ -1,6 +1,7 @@
 import vardict from './vardict'
+import type { dictionary } from './vardict'
 
-const AnirudhaPaul: { [key: string]: any } = {
+const AnirudhaPaul: dictionary = {
   'full name': 'Anirudha Paul',
   age: 25,
   single: true,
