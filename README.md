@@ -45,9 +45,9 @@ As mentioniod above, the rule of parsing is "getopt-ish", meaning that this pack
 
 Add the package via command line.
 
-| NPM | Yarn |
-| --- | --- |
-| `npm i vardict` | `yarn add vardict` |
+| NPM | Yarn | PNPM | Bun |
+| --- | --- | --- | --- |
+| `npm i vardict` | `yarn add vardict` | `pnpm add vardict` | `bun add vardict` |
 
 ## How to use
 
