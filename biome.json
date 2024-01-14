@@ -3,6 +3,25 @@
 	"organizeImports": {
 		"enabled": true
 	},
+	"formatter": {
+		"enabled": true,
+		"formatWithErrors": false,
+		"indentStyle": "space",
+		"indentWidth": 2,
+		"lineWidth": 120,
+		"lineEnding": "lf",
+		"ignore": []
+	},
+	"javascript": {
+		"formatter": {
+			"enabled": true,
+			"arrowParentheses": "asNeeded",
+			"bracketSameLine": true,
+			"quoteStyle": "single",
+			"semicolons": "asNeeded",
+			"trailingComma": "es5"
+		}
+	},
 	"linter": {
 		"enabled": true,
 		"rules": {
