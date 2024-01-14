@@ -40,6 +40,9 @@ As mentioniod above, the rule of parsing is "getopt-ish", meaning that this pack
   - `node index.js -country BD -popDensPerSqKM 1116 -overPop true` will yield `{ country: 'BD', popDensPerSqKM: 1116, overPop: true }`
 - If there is no value provided after an annotation, it is considered a `boolean` value and set to `true`.
   - `node index.js -country NZ -covidFree -pop 4886000 -neighbour` will output `{ country: 'NZ', covidFree: true, pop: 4886000, neighbour: true }`.
+- If the same key is supplied twice, they are merged into an array.
+  - `node index.js -country Australia -easternStates QLD -easternStates NSW -easternStates VIC -easternStates TAS` will give `{ country: 'Australia', easternStates: ['QLD', 'NSW', 'VIC', 'TAS'] }`.
+  - `node index.js -asl 28 -asl false -asl Sydney` will generate `{ asl: [28, false, 'Sydney'] }`.
 
 ## Installation
 
