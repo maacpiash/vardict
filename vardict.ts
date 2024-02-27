@@ -25,6 +25,7 @@ export type valueType = string | number | boolean
 export type dictionary = Record<string, valueType | valueType[]>
 
 const update = (obj: dictionary, key: string, value: valueType): dictionary => {
+  // biome-ignore lint/suspicious/noPrototypeBuiltins: <explanation>
   if (obj.hasOwnProperty(key)) {
     // the key is already there
     if (Array.isArray(obj[key])) {
@@ -47,7 +48,7 @@ const properValue = (val: string): valueType => {
   if (val === 'false') return false
   if (val === 'true') return true
   const num = Number(val)
-  if (!isNaN(num)) return num
+  if (!Number.isNaN(num)) return num
   return val
 }
 
