@@ -77,7 +77,6 @@ for (let i = 2; i < max; i++) {
     if (args[i + 1] && args[i + 1].startsWith('-')) {
       // key without value is set true by default
       update(vardict, key, true)
-      vardict[key] = true
     } else {
       i++
       value = properValue(args[i])
