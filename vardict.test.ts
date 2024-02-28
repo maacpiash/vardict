@@ -22,7 +22,31 @@
  * SOFTWARE.
  */
 import vardict from './vardict'
-import type { dictionary } from './vardict'
+import type { valueType, dictionary } from './vardict'
+
+const arraysEqual = (a: valueType[], b: valueType[]): boolean => {
+  if (a === b) return true
+  if (a == null || b == null) return false
+  if (a.length !== b.length) return false
+
+  const x = a.sort()
+  const y = b.sort()
+
+  for (let i = 0; i < a.length; ++i) {
+    if (x[i] !== y[i]) return false
+  }
+
+  return true
+}
+
+const valuesAreEqual = (a: valueType | valueType[], b: valueType | valueType[]): boolean => {
+  if (Array.isArray(a)) {
+    if (Array.isArray(b))
+      return arraysEqual(a, b)
+    return false
+  }
+  return a === b
+}
 
 const AnirudhaPaul: dictionary = {
   'full name': 'Anirudha Paul',
@@ -37,5 +61,6 @@ const AnirudhaPaul: dictionary = {
   'nick-name': 'Prasun',
 }
 
-const keys = Object.keys(AnirudhaPaul)
-keys.forEach(k => AnirudhaPaul[k] !== vardict[k] && process.exit(1))
+for (const k in AnirudhaPaul) {
+  valuesAreEqual(AnirudhaPaul[k], vardict[k]) || process.exit(1)
+}
