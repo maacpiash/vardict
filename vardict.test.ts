@@ -60,5 +60,8 @@ const AnirudhaPaul: dictionary = {
 }
 
 for (const k in AnirudhaPaul) {
-  valuesAreEqual(AnirudhaPaul[k], vardict[k]) || process.exit(1)
+  if (!valuesAreEqual(AnirudhaPaul[k], vardict[k])) {
+    console.error(`Key ${k}, Expected ${AnirudhaPaul[k]}, Parsed ${vardict[k]}`)
+    process.exit(1)
+  }
 }
