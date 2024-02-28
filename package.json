@@ -22,7 +22,7 @@
   "scripts": {
     "build": "tsc",
     "cleanup": "rimraf out && prettier --write \"./*.ts\" && eslint **/*.ts --fix",
-    "test": "tsc && node out/vardict.test.js --'full name' 'Anirudha Paul' --age 25 --single -c 'Samsung R&D' --home Mymensingh --coolWithLadies false -wantsToGoTo=USA --IELTS=7.5 --favoriteFood kachchi -nick-name Prasun"
+    "test": "tsc && node out/vardict.test.js --'full name' 'Anirudha Paul' -asl 30 false California --single --coolWithLadies false -nick-name Prasun --degrees BSc MS --friends Raiyan Akib Adar Abir Adnan Ivan Nobel --talented"
   },
   "license": "MIT",
   "devDependencies": {

@@ -50,15 +50,13 @@ const valuesAreEqual = (a: valueType | valueType[], b: valueType | valueType[]):
 
 const AnirudhaPaul: dictionary = {
   'full name': 'Anirudha Paul',
-  age: 25,
+  asl: [ 30, false, 'California' ],
   single: true,
-  c: 'Samsung R&D',
-  home: 'Mymensingh',
   coolWithLadies: false,
-  wantsToGoTo: 'USA',
-  IELTS: 7.5,
-  favoriteFood: 'kachchi',
   'nick-name': 'Prasun',
+  degrees: [ 'BSc', 'MS' ],
+  friends: [ 'Raiyan', 'Akib', 'Adar', 'Abir', 'Adnan', 'Ivan', 'Nobel' ],
+  talented: true
 }
 
 for (const k in AnirudhaPaul) {
