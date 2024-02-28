@@ -78,10 +78,12 @@ for (let i = 2; i < max; i++) {
       // key without value is set true by default
       update(vardict, key, true)
     } else {
-      i++
-      value = properValue(args[i])
-      value = value === undefined ? true : value
-      update(vardict, key, value)
+      while (args[i + 1] && !args[i + 1].startsWith('-')) {
+        i++
+        value = properValue(args[i])
+        value = value === undefined ? true : value
+        update(vardict, key, value)
+      }
     }
   }
 }
