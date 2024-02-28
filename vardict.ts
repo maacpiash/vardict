@@ -74,8 +74,9 @@ for (let i = 2; i < max; i++) {
       update(vardict, a, properValue(b))
       continue
     }
-    if (args[i + 1] && args[i + 1].startsWith('-')) {
-      // key without value is set true by default
+    if (!args[i + 1] || args[i + 1]?.startsWith('-')) {
+      // all unassigned keys are set true by default
+      // this includes the very last key: `!args[i + 1]`
       update(vardict, key, true)
     } else {
       while (args[i + 1] && !args[i + 1].startsWith('-')) {
