@@ -43,6 +43,8 @@ As mentioniod above, the rule of parsing is "getopt-ish", meaning that this pack
 - If the same key is supplied twice, they are merged into an array.
   - `node index.js -country Australia -easternStates QLD -easternStates NSW -easternStates VIC -easternStates TAS` will give `{ country: 'Australia', easternStates: ['QLD', 'NSW', 'VIC', 'TAS'] }`.
   - `node index.js -asl 28 -asl false -asl Sydney` will generate `{ asl: [28, false, 'Sydney'] }`.
+- If a key is followed by multiple properties, they are merged into an array.
+  - `node index.js -asl 28 false Sydney` will produce `{ asl: [28, false, 'Sydney'] }`, the same as the previous example.
 
 ## Installation
 
