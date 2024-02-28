@@ -33,7 +33,7 @@ const update = (obj: dictionary, key: string, value: valueType): dictionary => {
       const array = obj[key] as valueType[]
       obj[key] = [...array, value]
     } else {
-      // the value is an atomic ``
+      // the value is an atomic `valueType`
       const existingValue = obj[key] as valueType
       obj[key] = [existingValue, value]
     }
